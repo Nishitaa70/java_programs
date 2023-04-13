@@ -1,2 +1,7 @@
-package com.nishita;public class HelloWorld {
+package com.nishita;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("HELLO WORLD");
+    }
 }
