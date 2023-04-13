@@ -1,9 +1,8 @@
 package com.array;
 import java.util.Scanner;
-import java.io.*;
 
 
-public class Array {
+public class Arrayinput {
     public static void main(String[] args) {
         /* syntax of array-
            dataype variablename[] = new datatype[size];
