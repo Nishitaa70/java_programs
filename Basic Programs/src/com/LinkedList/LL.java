@@ -21,6 +21,26 @@ public class LL {
         size += 1;
     }
 
+    public void insertMiddle(int value, int index){
+        if(index == 0){
+            insertFirst(value);
+        }
+        if(index == size){
+            lastInsert(value);
+        }
+
+        Node temp = head;
+        if(int i = 1; i < index; i++){
+            temp = temp.next;
+        }
+        Node node = new Node(value, temp.next);
+        temp.next = node;
+        size++;
+
+        
+
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){
