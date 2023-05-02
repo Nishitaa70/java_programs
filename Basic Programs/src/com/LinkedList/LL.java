@@ -6,6 +6,7 @@ public class LL {
     private int size;
 
     public LL() {
+
         this.size = 0;
     }
 
@@ -46,13 +47,47 @@ public class LL {
         size++;
     }
 
+    public int deleteFirst(){
+        int value = head.value;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return value;
+
+    }
+
+    public Node get(int index){
+        Node node = head;
+        for(int i = 0; i < index; i++){
+            node = node.next;
+        }
+        return node;
+    }
+
+    public int deleteLast(){
+        if(size <= 1){
+            return deleteFirst();
+        }
+        Node secondlast = get(size-2);
+        int value = tail.value;
+        tail = secondlast;
+        tail.next = null;
+        return value;
+    }
+
+
+
+
+
     public void display(){
         Node temp = head;
         while(temp != null){
             System.out.print(temp.value + "->");
             temp = temp.next;
         }
-        System.out.println("END");
+        System.out.println("NULL");
     }
 
     private class Node{
@@ -61,6 +96,7 @@ public class LL {
         private Node next;
 
         public Node(int value) {
+
             this.value = value;
         }
         public Node(int value, Node next) {
