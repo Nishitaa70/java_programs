@@ -15,6 +15,8 @@ public class Main {
         list.insertMiddle(67, 3);
         list.display();
         list.deleteFirst();
+        list.deleteMid(3);
+        list.find(90);
         list.display();
     }
 
